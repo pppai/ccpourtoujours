@@ -1,16 +1,32 @@
 package domain;
 
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+
+@Entity
 public class User {
+    @Id
+    @GeneratedValue
     private int id;
+    @Column(nullable = false)
     private String account;
+    @Column(nullable = false)
     private String password;
+    @Column(nullable = false)
     private String name;
+    @Column(nullable = false)
     private int sex;
+    @Column(nullable = false)
     private int visable;
+    @Column(nullable = true)
     private String phone;
+    @Column(nullable = true)
     private String idCard;
+    @Column(nullable = true)
     private String eMail;
+    @Column(nullable = true)
     private String remark;
+    @Column(nullable = true)
     private String createTime;
 
     public int getId() {
